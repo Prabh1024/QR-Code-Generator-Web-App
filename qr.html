@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR CODE</title>
+    <style>
+        body{
+            background-image: url("https://cdn.dribbble.com/userupload/19111173/file/original-6269d13c74c1d3f611208be9a41af6b9.jpg" );
+            background-repeat:no-repeat ;
+            background-size: cover;
+            background-attachment:fixed;
+
+        }
+    </style>
+</head>
+<body>
+    <center><input type="text" id="text"></center><br><br>
+         <center> <img src="" id="img"><br><br></center>
+    <center><button onclick="qr()"> Click here</button></center>
+<script>
+    
+    let text = document.getElementById("text");
+    let image = document.getElementById("img");
+    function qr() {
+        image.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+text.value;
+    }
+</script>
+    
+</body>
+</html>
